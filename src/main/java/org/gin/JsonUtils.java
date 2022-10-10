@@ -1,9 +1,11 @@
 package org.gin;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * @author bx002
@@ -38,7 +40,31 @@ public class JsonUtils {
      * @param obj 对象
      * @param file 文件
      */
-    public static void writeToFile(Object obj,File file){
+    public static void writeToFile(Object obj,File file) throws IOException {
+        FileUtils.writeToFile(obj2JsonString(obj),file);
+    }
 
+    /**
+     * 从文件中读取一个对象
+     * @param file 文件
+     * @param clazz 类型
+     * @return 对象
+     * @param <T> 对象类型
+     * @throws IOException 异常
+     */
+    public static <T> T readFromFile(File file,Class<T> clazz) throws IOException {
+        return JSONObject.parseObject(FileUtils.readFromFile(file),clazz);
+    }
+
+    /**
+     * 从文件中读取一个对象
+     * @param file 文件
+     * @param clazz 类型
+     * @return 对象
+     * @param <T> 对象类型
+     * @throws IOException 异常
+     */
+    public static <T> T readFromFile(File file, TypeReference<T> clazz) throws IOException {
+        return JSONObject.parseObject(FileUtils.readFromFile(file),clazz);
     }
 }
