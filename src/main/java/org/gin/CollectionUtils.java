@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  * @version : v1.0.0
  * @since : 2022/8/3 17:31
  **/
+@SuppressWarnings("unused")
 public class CollectionUtils {
     /**
      * 转换一个集合到一个列表

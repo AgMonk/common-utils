@@ -7,6 +7,7 @@ import java.util.UUID;
  * 字符串工具类
  * @author bx002
  */
+@SuppressWarnings("unused")
 public class StringUtils {
     /**
      * 判断一个对象是否为空

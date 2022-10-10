@@ -10,6 +10,7 @@ import java.util.function.Function;
  * @version : v1.0.0
  * @since : 2022/9/23 17:52
  **/
+@SuppressWarnings("unused")
 public class MapUtils {
     /**
      * 转换一个集合到一个HashMap
