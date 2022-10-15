@@ -34,4 +34,18 @@ public class MapUtils {
         });
         return map;
     }
+
+    /**
+     * 生成一个单个字段的HashMap
+     * @param key key
+     * @param value value
+     * @return HashMap
+     * @param <K> key类型
+     * @param <V> value类型
+     */
+    public static <K,V> HashMap<K,V> singleTon(K key,V value){
+        final HashMap<K, V> map = new HashMap<>(1);
+        map.put(key,value);
+        return map;
+    }
 }
