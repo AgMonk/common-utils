@@ -1,4 +1,4 @@
-package org.gin;
+package org.gin.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;

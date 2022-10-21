@@ -1,4 +1,4 @@
-package org.gin;
+package org.gin.utils;
 
 import java.util.Collection;
 import java.util.HashMap;

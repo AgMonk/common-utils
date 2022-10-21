@@ -1,4 +1,4 @@
-package org.gin;
+package org.gin.utils;
 
 import java.io.Serializable;
 import java.util.UUID;
